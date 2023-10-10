@@ -15,15 +15,15 @@
         form {
             border: 1px solid #000;
             padding: 2rem;
-            width: 50%;
+            width: 20%;
             display: flex;
             flex-direction: column;
             box-shadow: 0 0 10px rgba(0,0,0,0.15);
             background-color: #fff;
         }
         label, input {
-            margin-bottom: 1rem;
-            font-size: 1.2em;
+            /*margin-bottom: 1rem;*/
+            font-size: 1em;
         }
         button {
             cursor: pointer;
@@ -37,10 +37,9 @@
     </style>
 </head>
 <body>
-{{PHP_VERSION}}
-{{PHP_VERSION_ID}}
 
-<form action="/mypageblade/contacts" method="post">
+
+<form action="/mypageblade/contacts" method="get">
     <label for="name">Имя:</label>
     <input type="text" id="name" name="name"><br>
     <label for="email">E-mail:</label>

@@ -66,13 +66,10 @@
             <h4> {{$totalSum}} @currency(usd) </h4></div>
     @show
 
-        <form action=“/contact” method=“post”>
-            <label for=“name”>Имя:</label>
-            <input type=“text” id=“name” name=“name”><br>
-            <label for=“email”>E-mail:</label>
-            <input type=“email” id=“email” name=“email”><br>
-            <button type=“submit”>Отправить</button>
+
 </div>
+{{--<x-form name="Ivan" email = 'fff@mail'/>--}}
+<x-form />
 </body>
 </html>
 
