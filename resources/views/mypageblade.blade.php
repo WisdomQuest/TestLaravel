@@ -63,8 +63,15 @@
 
     @section('basket')
         <div class="cart">количество товаров в корзине: <h4> {{$numberProduct}}  </h4><br/> общая сумма <br/>
-            <h4> {{$totalSum}} @currency(['500','rub']) </h4></div>
+            <h4> {{$totalSum}} @currency(usd) </h4></div>
     @show
+
+        <form action=“/contact” method=“post”>
+            <label for=“name”>Имя:</label>
+            <input type=“text” id=“name” name=“name”><br>
+            <label for=“email”>E-mail:</label>
+            <input type=“email” id=“email” name=“email”><br>
+            <button type=“submit”>Отправить</button>
 </div>
 </body>
 </html>

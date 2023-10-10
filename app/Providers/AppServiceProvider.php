@@ -34,13 +34,15 @@ class AppServiceProvider extends ServiceProvider
             return "<?php echo '<b>$param</b>';?>";
         });
 
-        Blade::directive('currency', function ($currency,$price) {
-            if ($currency == 'rub') {
+
+        Blade::directive('currency', function ($currency) {
+            $price = 600;
+            if ($currency === 'rub') {
                 return "<?php echo $price . 'руб'?>";
-            } elseif ($currency == 'usd') {
-                return "<?php echo '$' . $price ?>";
+            } elseif ($currency === 'usd') {
+                return "<?php echo '$' . $price  ?>";
             } else {
-                return '1';
+                return $price . 'Нет у нас таких валют';
             }
         });
     }
