@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang=“ru”>
 <head>
     <meta charset=“utf-8”>
     <title>Test components</title>
@@ -12,7 +12,7 @@
 {{--<x-mypageblade input-type="text"/>--}}
 <x-errors-messages>
 
-<i>Вот така ошибочка</i>
+    <i>Вот така ошибочка</i>
 </x-errors-messages>
 </body>
 </html>
