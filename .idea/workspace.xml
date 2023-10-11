@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2dfab0b2-bf5f-4fa9-9ef5-eeb55e0a026f" name="Changes" comment="seven day">
+      <change afterPath="$PROJECT_DIR$/resources/views/components/errors-messages.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/mypageblade.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mypageblade.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/testcomponent.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/testcomponent.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -329,6 +330,7 @@
       <workItem from="1696926930447" duration="300000" />
       <workItem from="1696927239682" duration="2252000" />
       <workItem from="1696930695253" duration="680000" />
+      <workItem from="1696988819250" duration="864000" />
     </task>
     <task id="LOCAL-00001" summary="seven day">
       <option name="closed" value="true" />
@@ -346,7 +348,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696926956547</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="seven day">
+      <option name="closed" value="true" />
+      <created>1696988922881</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1696988922881</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
