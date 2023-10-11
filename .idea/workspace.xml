@@ -5,9 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2dfab0b2-bf5f-4fa9-9ef5-eeb55e0a026f" name="Changes" comment="seven day">
-      <change afterPath="$PROJECT_DIR$/resources/views/components/errors-messages.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/child/indexlayout.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/child/indexmypage.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/request.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TestController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/child/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/child/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/errors-messages.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/errors-messages.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/contacts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/contacts.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/myClient.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/myClient.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/mypageblade.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mypageblade.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/testcomponent.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/testcomponent.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -302,6 +313,7 @@
       <recent name="D:\Games\OSPanel\domains\laravelRus" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Games\OSPanel\domains\laravelRus\resources\views\Layouts" />
       <recent name="D:\Games\OSPanel\domains\laravelRus\laravelRus\resources\views\ac" />
     </key>
   </component>
@@ -330,7 +342,7 @@
       <workItem from="1696926930447" duration="300000" />
       <workItem from="1696927239682" duration="2252000" />
       <workItem from="1696930695253" duration="680000" />
-      <workItem from="1696988819250" duration="864000" />
+      <workItem from="1696988819250" duration="20205000" />
     </task>
     <task id="LOCAL-00001" summary="seven day">
       <option name="closed" value="true" />
@@ -356,7 +368,23 @@
       <option name="project" value="LOCAL" />
       <updated>1696988922881</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="seven day">
+      <option name="closed" value="true" />
+      <created>1696989709454</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1696989709454</updated>
+    </task>
+    <task id="LOCAL-00005" summary="seven day">
+      <option name="closed" value="true" />
+      <created>1696989805771</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1696989805771</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

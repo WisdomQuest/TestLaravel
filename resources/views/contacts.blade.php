@@ -5,47 +5,58 @@
     <title>Contact Form</title>
     <style>
         body {
-            background-color: #fafafa;
+            background-color: #b1dfbb;
+            font-family: Arial, sans-serif;
+            /*color: #b1dfbb;*/
+            margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
         }
         form {
-            border: 1px solid #000;
-            padding: 2rem;
-            width: 20%;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 0 10px rgba(0,0,0,0.15);
-            background-color: #fff;
+            width: 100%;
+            border-radius: 5px;
+            padding: 20px;
+            background-color: #F5F5F5;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
         }
-        label, input {
-            /*margin-bottom: 1rem;*/
+        input {
+            padding: 10px;
+            margin-bottom: 10px;
             font-size: 1em;
+            border-radius: 3px;
+            border: 1px solid #ddd;
         }
         button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
             cursor: pointer;
-            background-color: #007bFF;
-            color: #fff;
-            padding: 0.5rem;
+            border-radius: 3px;
+            font-size: 1em;
         }
         button:hover {
-            background-color: #0056b3;
+            background-color: #45a049;
         }
+        /*.slott {*/
+        /*   background-color: #4bb1b1;*/
+        /*    color: #4bb1b1;*/
+        /*}*/
+
     </style>
 </head>
 <body>
+<x-form>
 
-
-<form action="/mypageblade/contacts" method="get">
-    <label for="name">Имя:</label>
-    <input type="text" id="name" name="name"><br>
-    <label for="email">E-mail:</label>
-    <input type="email" id="email" name="email"><br>
-    <button type="submit">Отправить</button>
-</form>
+    <div style="color: green">
+        <x-slot name="messageForm">
+            После заполнения формы мы с Вами свяжемся в течение 24 часов
+        </x-slot>
+    </div>
+</x-form>
 </body>
 </html>
 

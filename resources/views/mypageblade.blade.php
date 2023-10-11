@@ -2,71 +2,40 @@
 <html>
 <head>
     <style>
-        .container {
-            display: flex;
-            justify-content: space-between;
-            margin: auto;
-            max-width: 600px;
-            border-radius: 5px;
-            border: 2px solid #e6e6e6;
-            padding: 20px;
-            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
-        }
-
-        table {
-            border-collapse: collapse;
-            width: 60%;
-        }
-
-        th, td {
-            text-align: left;
-            padding: 8px;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-
-        .cart {
-            border: 2px solid #e6e6e6;
-            width: 200px;
-            padding: 16px;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
-        }
-        .form {
-            background-color: #fafafa;
+        body {
+            background-color: #F0FFF0; /* Honeydew color for light feel */
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
+            font-family: Arial, sans-serif; /* Simple and clean typeface */
         }
-
         form {
-            border: 2px solid #000;
+            border: none;
             padding: 2rem;
-            width: 100%;
+            width: 60%; /* Adjust the form width */
             display: flex;
             flex-direction: column;
-            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
             background-color: #fff;
+            border-radius: 15px; /* Rounded corners for softer look */
         }
-
         label, input {
-            /*margin-bottom: 1rem;*/
+            margin-bottom: 1rem;
             font-size: 1em;
         }
-
         button {
             cursor: pointer;
-            background-color: #007bFF;
+            background-color: #668cff; /* Light blue button */
             color: #fff;
             padding: 0.5rem;
+            border: none;
+            border-radius: 5px; /* Rounded corners for button */
+            transition: all 0.3s ease; /* Animation on hover */
         }
-
         button:hover {
-            background-color: #0056b3;
+            background-color: #4d79ff; /* Different color when mouss-hover */
         }
     </style>
 </head>
@@ -74,9 +43,10 @@
 
 {{--{{\Illuminate\Support\Js::from($client)}}--}}
 
+<x-my-client>
+    <x-slot name='title'>1</x-slot>
 
-<div class="container">
-    @section('$client')
+    <x-slot name='client'>
         <table>
             <tr>
                 <th>ID</th>
@@ -93,19 +63,27 @@
                 </tr>
             @endforeach
         </table>
-    @show
+    </x-slot>
 
-    @section('basket')
+    <x-slot name='basket'>
         <div class="cart">количество товаров в корзине: <h4> {{$numberProduct}}  </h4><br/> общая сумма <br/>
-            <h4> {{$totalSum}} @currency(usd) </h4></div>
-    @show
+            <h4> {{$totalSum}} @currency(usd) </h4>
+        </div>
+    </x-slot>
 
+    <x-slot name='message'>
+        <div class="form">
+            <x-slot name="messageForm">
+                После заполнения формы мы с Вами свяжемся в течение 24 часов
+            </x-slot>
+        </div>
+    </x-slot>
 
-</div>
-{{--<x-form name="Ivan" email = 'fff@mail'/>--}}
-<div class="form">
-    <x-form/>
-</div>
+</x-my-client>
+
+<x-form>
+</x-form>
+
 </body>
 </html>
 

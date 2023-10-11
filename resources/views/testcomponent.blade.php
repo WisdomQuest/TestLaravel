@@ -11,8 +11,10 @@
 <x-error-message message='Ошибка'/>
 {{--<x-mypageblade input-type="text"/>--}}
 <x-errors-messages>
-
-    <i>Вот така ошибочка</i>
+    <x-slot name="header" class="my-class">
+        Ошибка
+    </x-slot>
+    <i>Вот такая ошибочка</i>
 </x-errors-messages>
 </body>
 </html>

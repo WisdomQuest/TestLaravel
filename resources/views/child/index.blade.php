@@ -11,7 +11,7 @@
     <p>Основное содержимое страницы</p>
 @endsection
 
-@extends('mypageblade')
+{{--@extends('mypageblade')--}}
 
 
 {{--@section('basket')--}}

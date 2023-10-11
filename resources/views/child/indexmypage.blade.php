@@ -1,5 +1,6 @@
 <x-my-client>
     <x-slot name='title'>1</x-slot>
+
     <x-slot name='client'>
         <table>
             <tr>
@@ -18,15 +19,19 @@
             @endforeach
         </table>
     </x-slot>
-    <x-slot name='basket'>
 
+    <x-slot name='basket'>
+        <div class="cart">количество товаров в корзине: <h4> {{$numberProduct}}  </h4><br/> общая сумма <br/>
+            <h4> {{$totalSum}} @currency(usd) </h4>
+        </div>
     </x-slot>
-{{--    <x-slot name='$messageForm'>4</x-slot>--}}
-    <div class="form">
-        <x-slot name="message">
-            После заполнения формы мы с Вами свяжемся в течение 24 часов
-        </x-slot>
-    </div>
+
+    <x-slot name='message'>
+        <div class="form">
+            <x-slot name="messageForm">
+                После заполнения формы мы с Вами свяжемся в течение 24 часов
+            </x-slot>
+        </div>
+    </x-slot>
 
 </x-my-client>
-

@@ -8,5 +8,8 @@
     </form>
 </div>
 
+<div>
+{{--    {{$messageForm}}--}}
+</div>
 
 {{--<input class="input-text" type="text" value="{{$name}}"  />--}}

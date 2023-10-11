@@ -74,23 +74,18 @@ Route::get('/secretpage', function () {
 
 
 Route::get('/home', [MainController::class, 'home'])->middleware('checkLocalhost');
-
-
 Route::get('/message/{id?}', [MainController::class, 'message']);
-
 Route::get('/mypage', [TestController::class, 'test']);
-
 Route::get('testview', [MainController::class, 'testview']);
-
 Route::get('testblade', [MainController::class, 'testblade']);
-
 Route::get('mypageblade', [TestController::class, 'mypageblade']);
-
 Route::get('TestJson',[TestController::class, 'TestJson']);
-
 Route::get('extendsview',[MainController::class, 'extendsView']);
 Route::get('testcomponent',[MainController::class, 'testComponent']);
 Route::get('mypageblade/clients', [TestController::class, 'myClient']);
 Route::get('mypageblade/contacts', [TestController::class, 'contacts']);
-
+Route::get('testlayout', [MainController::class, 'testLayout']);
+Route::get('request',[MainController::class, 'Request']);
+Route::get('testresponse',[MainController::class, 'testResponse']);
+Route::get('testcomponent',[TestController::class, 'testComponent']);
 

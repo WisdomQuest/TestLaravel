@@ -33,5 +33,9 @@ class TestController extends Controller
     {
         return view('contacts');
     }
+    public function testComponent()
+    {
+        return view('child.indexmypage',['client' => StdClass::add()]);
+    }
 
 }
