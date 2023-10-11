@@ -34,6 +34,40 @@
             border-radius: 5px;
             box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
         }
+        .form {
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            border: 2px solid #000;
+            padding: 2rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
+            background-color: #fff;
+        }
+
+        label, input {
+            /*margin-bottom: 1rem;*/
+            font-size: 1em;
+        }
+
+        button {
+            cursor: pointer;
+            background-color: #007bFF;
+            color: #fff;
+            padding: 0.5rem;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -69,7 +103,9 @@
 
 </div>
 {{--<x-form name="Ivan" email = 'fff@mail'/>--}}
-<x-form />
+<div class="form">
+    <x-form/>
+</div>
 </body>
 </html>
 
