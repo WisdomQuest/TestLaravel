@@ -6,12 +6,12 @@
 </head>
 <body>
 
-{{$x =(\Illuminate\Support\Js::from($example))}}
+{{--{{$x =(\Illuminate\Support\Js::from($example))}}--}}
 <p>
 
 </p>
 
-<h1>Заголовок страницы</h1>
-<p>Простой текст внутри тега p</p>
+<h1>Данная операция пока не поддерживается!</h1>
+{{--<p>Простой текст внутри тега p</p>--}}
 </body>
 </html>

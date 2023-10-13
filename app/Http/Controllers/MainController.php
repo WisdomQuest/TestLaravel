@@ -2,8 +2,14 @@
 
 namespace App\Http\Controllers;
 
+
+use App\Exceptions\MyException;
 use Illuminate\Http\Request;
 use App\Models\StdClass;
+use Illuminate\Support\Facades\URL;
+use Mockery\Exception;
+use Termwind\Components\Ul;
+
 
 //use Illuminate\View\View;
 //use Illuminate\Support\Facades\View;
@@ -113,7 +119,99 @@ class MainController extends Controller
 
     public function Request(Request $request)
     {
-        return view('request');
+        return view('request', ['request' => $request]);
     }
+
+    public function Response()
+    {
+        return view('myRespone');
+    }
+
+    public function Download(Request $request)
+    {
+//        return __DIR__ . '../../../storage/app/2.webp';
+//        return response()->file(__DIR__ .'/../../../storage/app/2.webp');
+//     echo url()->signedRoute('timeDownload');
+//     $url = url()->temporarySignedRoute('timeDownload', now()->addSecond(15));
+//            URL::temporarySignedRoute()
+
+//        return redirect($url) ;
+
+
+
+    }
+
+    public function timeDownload()
+    {
+
+//     return response()->download(storage_path('app/2.webp'));
+        return view('download');
+//       return 'Успешная активация: ';
+    }
+
+
+    public function testUrl()
+    {
+        echo url()->current() . '<br>';// текущий урл
+//        echo URL::current();
+        echo url()->full() . '<br>';//полный урл
+        echo url()->previous() . '<br>';// предыдущий урл посещенной страницы
+        echo route('user', ['id' => 3]) . '<br>';// урл именнованого маршрунта
+        echo route('resp') . '<br>';
+        echo url()->signedRoute('activate', ['id' => 1]) . '<br>';// секретная ссылка
+        echo url()->temporarySignedRoute('activate', now()->addSecond('15'), ['id' => 1]) . '<br>';// секретная ссылка
+        return '';
+    }
+
+    public function activate(Request $request)
+    {/*
+        //проверяет верна ли секретная ссылка
+        if ($request->hasValidSignature()) {
+            return 'Успешная активация: ' . $request->id;
+        }
+        abort( 401);
+     */
+
+        return 'Успешная активация: ' . $request->id;
+    }
+
+    public function counter(Request $request)
+    {
+//        echo '<pre>';
+//        print_r($request->session()->all());
+//        echo '</pre>';
+        echo '<pre>';
+        print_r(session()->all());
+        echo '</pre>';
+        echo session()->exists('b') . '<br>';// есть ли переменная в сессии
+        echo session()->has('b') . '<br>';// есть ли переменная в сессии и отлична от нуля
+        session()->put('b', 'eee'); // добавить в сессию
+        echo  session()->get('b') . '<br>'; // считать параметр из сессии
+        session(['c'=>[1,2,3], 'e'=>[1=>[1,2],2,]]);//добавить в сессию
+        session()->push('c', 12); // добавление параметра в массив
+//echo  session()->pull('c'); // вернет значение и сразу удаляет
+        session()->forget('c'); // удаление
+
+
+
+        //счетчик сессии
+//        $counter = session()->get('counter', 0);
+//        $counter++;
+//        session()->put('counter', $counter);
+//        return $counter;
+//        session()->forget('counter');
+        session()->increment('counter');
+        return session()->get('counter');
+
+    }
+
+    public function testException()
+    {
+
+          throw new MyException();
+
+
+    }
+
 
 }

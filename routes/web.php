@@ -76,16 +76,25 @@ Route::get('/secretpage', function () {
 Route::get('/home', [MainController::class, 'home'])->middleware('checkLocalhost');
 Route::get('/message/{id?}', [MainController::class, 'message']);
 Route::get('/mypage', [TestController::class, 'test']);
-Route::get('testview', [MainController::class, 'testview']);
-Route::get('testblade', [MainController::class, 'testblade']);
-Route::get('mypageblade', [TestController::class, 'mypageblade']);
-Route::get('TestJson',[TestController::class, 'TestJson']);
-Route::get('extendsview',[MainController::class, 'extendsView']);
-Route::get('testcomponent',[MainController::class, 'testComponent']);
-Route::get('mypageblade/clients', [TestController::class, 'myClient']);
-Route::get('mypageblade/contacts', [TestController::class, 'contacts']);
-Route::get('testlayout', [MainController::class, 'testLayout']);
-Route::get('request',[MainController::class, 'Request']);
-Route::get('testresponse',[MainController::class, 'testResponse']);
-Route::get('testcomponent',[TestController::class, 'testComponent']);
-
+Route::get('/testview', [MainController::class, 'testview']);
+Route::get('/testblade', [MainController::class, 'testblade']);
+Route::get('/mypageblade', [TestController::class, 'mypageblade']);
+Route::get('/TestJson',[TestController::class, 'TestJson']);
+Route::get('/extendsview',[MainController::class, 'extendsView']);
+Route::get('/testcomponent',[MainController::class, 'testComponent']);
+Route::get('/mypageblade/clients', [TestController::class, 'myClient']);
+Route::get('/mypageblade/contacts', [TestController::class, 'contacts']);
+Route::get('/testlayout', [MainController::class, 'testLayout']);
+Route::get('/request',[MainController::class, 'Request']);
+Route::get('/testresponse',[MainController::class, 'testResponse']);
+Route::get('/response',[MainController::class, 'Response'])->name('resp');
+Route::get('/testcomponent',[TestController::class, 'testComponent']);
+Route::get('/downloadtime',[MainController::class, 'Download']);
+Route::get('/testurl',[MainController::class, 'testUrl']);
+Route::get('/activate',[MainController::class, 'activate'])
+    ->middleware('signed')-> name('activate');
+Route::get('/counter',[MainController::class, 'counter']);
+Route::get('/testexception',[MainController::class, 'testException']);
+Route::get('/timedownload',[MainController::class, 'timeDownload'])
+    ->middleware('signed')->name('timeDownload');
+Route::get('/mylayout/clients',[TestController::class, 'mylayout']);

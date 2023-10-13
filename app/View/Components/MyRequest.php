@@ -12,10 +12,11 @@ class MyRequest extends Component
     /**
      * Create a new component instance.
      */
-    public $ip;
-    public function __construct($ip,Request $request)
+public $param;
+
+    public function __construct()
     {
-        return $this->ip = $request->ip();
+
     }
 
 
@@ -24,13 +25,41 @@ class MyRequest extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.my-request');
+        return view('components.my-request',);
     }
 
-//    public function getIp(Request $request): ?string
-//    {
-//        return $this->ip =$request->ip() ;
-//    }
+    /**
+     * @return mixed
+     */
+    public function getParam()
+    {
+        return $this->param;
+    }
+
+    /**
+     * @param mixed $param
+     */
+    public function setParam($param): void
+    {
+        $this->param = $param;
+    }
+
+    /**
+     * @return mixed
+     */
+
+    public static function add()
+    {
+//        $param =[];
+//            $paramObject =new MyRequest;
+//        $paramObject->setParam(
+//
+//        );
+    }
+
 }
 
-$object = new MyRequest();
+
+
+
+

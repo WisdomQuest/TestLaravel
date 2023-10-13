@@ -28,7 +28,7 @@ class AppServiceProvider extends ServiceProvider
 //        View::composer('test.example', function ($view) {
 ////            $view->with('composer_data', 'hello');
 //        });
-        View::composer(['test.example', 'myPage', 'mypageblade'], \App\View\Composers\ExampleComposer::class);
+        View::composer(['test.example', 'myPage', 'mypageblade','child.indexmypage','myClient', 'components/my-client'], \App\View\Composers\ExampleComposer::class);
 
         Blade::directive('importantMessage', function ($param): string {
             return "<?php echo '<b>$param</b>';?>";
@@ -36,7 +36,7 @@ class AppServiceProvider extends ServiceProvider
 
 
         Blade::directive('currency', function ($currency) {
-            $price = 600;
+            $price = 500;
             if ($currency === 'rub') {
                 return "<?php echo $price . 'руб'?>";
             } elseif ($currency === 'usd') {

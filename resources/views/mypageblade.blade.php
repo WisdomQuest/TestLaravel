@@ -44,7 +44,7 @@
 {{--{{\Illuminate\Support\Js::from($client)}}--}}
 
 <x-my-client>
-    <x-slot name='title'>1</x-slot>
+    <x-slot name='title'>Мое</x-slot>
 
     <x-slot name='client'>
         <table>
@@ -66,9 +66,7 @@
     </x-slot>
 
     <x-slot name='basket'>
-        <div class="cart">количество товаров в корзине: <h4> {{$numberProduct}}  </h4><br/> общая сумма <br/>
-            <h4> {{$totalSum}} @currency(usd) </h4>
-        </div>
+{{--        {{session()->get('price')}}--}}
     </x-slot>
 
     <x-slot name='message'>

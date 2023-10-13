@@ -9,7 +9,7 @@ class Handler extends ExceptionHandler
 {
     /**
      * The list of the inputs that are never flashed to the session on validation exceptions.
-     *
+     * Список входных данных, которые никогда не передаются в сеанс при исключениях проверки.
      * @var array<int, string>
      */
     protected $dontFlash = [
