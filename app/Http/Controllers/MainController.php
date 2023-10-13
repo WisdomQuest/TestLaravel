@@ -9,6 +9,7 @@ use App\Models\StdClass;
 use Illuminate\Support\Facades\URL;
 use Mockery\Exception;
 use Termwind\Components\Ul;
+use Illuminate\Support\Facades\Log;
 
 
 //use Illuminate\View\View;
@@ -211,6 +212,23 @@ class MainController extends Controller
           throw new MyException();
 
 
+    }
+
+    public function testlog()
+    {
+        Log::debug('debug lvl messages');
+        Log::info('informational messages');
+        Log::notice('notice messages');
+        Log::warning('warning messages');
+        Log::error('error messages');
+        Log::critical('critical messages');
+        Log::alert('alert messages');
+        Log::emergency('emergency messages');
+
+        Log::channel('daily')->debug('debug lvl messages');
+        Log::channel('mychannel')->alert('alert my log',['data'=>'чтото пошло не так']);
+
+        return 1;
     }
 
 

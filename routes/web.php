@@ -98,3 +98,4 @@ Route::get('/testexception',[MainController::class, 'testException']);
 Route::get('/timedownload',[MainController::class, 'timeDownload'])
     ->middleware('signed')->name('timeDownload');
 Route::get('/mylayout/clients',[TestController::class, 'mylayout']);
+Route::get('/testlog',[MainController::class, 'testLog']);
