@@ -48,13 +48,14 @@ public $param;
      * @return mixed
      */
 
- /*   public static function add()
+   public static function add()
     {
 //        $param =[];
 //            $paramObject =new MyRequest;
 //        $paramObject->setParam(
 //
 //        );
+       return 1;
     }
 
 }

@@ -4,23 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dfab0b2-bf5f-4fa9-9ef5-eeb55e0a026f" name="Changes" comment="day eight">
-      <change afterPath="$PROJECT_DIR$/resources/views/download.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/myRespone.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/request.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TestController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+    <list default="true" id="2dfab0b2-bf5f-4fa9-9ef5-eeb55e0a026f" name="Changes" comment="day ten">
       <change beforePath="$PROJECT_DIR$/app/View/Components/MyRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Components/MyRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/View/Composers/ExampleComposer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Composers/ExampleComposer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/TestJson.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/TestJson.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/my-client.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/my-client.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/my-request.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/my-request.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/mypageblade.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mypageblade.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/request.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -353,7 +338,7 @@
       <workItem from="1696988819250" duration="29507000" />
       <workItem from="1697033198505" duration="919000" />
       <workItem from="1697078753610" duration="25910000" />
-      <workItem from="1697165244472" duration="601000" />
+      <workItem from="1697165244472" duration="816000" />
     </task>
     <task id="LOCAL-00001" summary="seven day">
       <option name="closed" value="true" />
@@ -411,7 +396,23 @@
       <option name="project" value="LOCAL" />
       <updated>1697018774281</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="day ten">
+      <option name="closed" value="true" />
+      <created>1697166115146</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1697166115146</updated>
+    </task>
+    <task id="LOCAL-00009" summary="day ten">
+      <option name="closed" value="true" />
+      <created>1697166211174</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1697166211174</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -431,6 +432,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="seven day" />
     <MESSAGE value="day eight" />
-    <option name="LAST_COMMIT_MESSAGE" value="day eight" />
+    <MESSAGE value="day ten" />
+    <option name="LAST_COMMIT_MESSAGE" value="day ten" />
   </component>
 </project>
