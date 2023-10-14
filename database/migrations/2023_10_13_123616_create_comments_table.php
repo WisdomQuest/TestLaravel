@@ -13,9 +13,17 @@ return new class extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
+            $table->integer('post_id');
+            $table->string('name', 100);
+            $table->string('text', 1000);
             $table->timestamps();
-            $table->text('text');
         });
+
+        //добавление столбца в таблицу
+//        Schema::table('comments',function (Blueprint $table) {
+//            $table->integer('post_id');
+//        });
+
     }
 
     /**
