@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\DBController;
 
 /*
 |--------------------------------------------------------------------------
@@ -99,3 +100,4 @@ Route::get('/timedownload',[MainController::class, 'timeDownload'])
     ->middleware('signed')->name('timeDownload');
 Route::get('/mylayout/clients',[TestController::class, 'mylayout']);
 Route::get('/testlog',[MainController::class, 'testLog']);
+Route::get('/testdb',[DBController::class, 'testDB']);

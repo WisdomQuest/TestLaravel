@@ -22,10 +22,22 @@ class commentsSeeder extends Seeder
             $text = Str::random(mt_rand(30, 99)); // рандомный текст (рандомной длины)
             $created_at = date('Y-m-d H:i:s');
             $updated_at = date('Y-m-d H:i:s');
-            DB::insert(
+
+           // добавление записей
+            /* DB::insert(
                 'INSERT INTO `comments`(`post_id`, `name`, `text`, `created_at`, `updated_at`) VALUES (?, ?, ?, ?, ?)',
                 [$post_id, $name, $text, $created_at, $updated_at]
-            );
+            ); */
+
+            //добавление записей
+            DB::table('comments')->insert([
+                'post_id'=>$post_id,
+                'name'=>$name,
+                'text'=>$text,
+                'created_at'=>$created_at,
+                'updated_at'=>$updated_at,
+            ]);
+
         }
     }
 }
