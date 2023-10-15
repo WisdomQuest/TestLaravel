@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 
 class DBController extends Controller
 {
-    public function testDB()
+    public function commentsAdd()
     {
 
         /*        $names = ['Алексей', 'Иван', 'Петр', 'Павел', 'Юля', 'Лоя'];
@@ -49,11 +49,10 @@ class DBController extends Controller
             echo $com->post_id . '<br>';
             echo $com->name . '<br>';
             echo $com->text . '<br>';
-
+            echo '------------------------';
         }
-
-
-
         return '';
     }
+
+
 }

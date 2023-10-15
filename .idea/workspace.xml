@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dfab0b2-bf5f-4fa9-9ef5-eeb55e0a026f" name="Changes" comment="BD 11">
+    <list default="true" id="2dfab0b2-bf5f-4fa9-9ef5-eeb55e0a026f" name="Changes" comment="BD task 12">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DBController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DBController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_10_13_120350_create_news_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_10_13_120350_create_news_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2023_10_13_123254_create_authors_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_10_13_123254_create_authors_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeders/commentsSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/commentsSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -342,7 +346,8 @@
       <workItem from="1697078753610" duration="25910000" />
       <workItem from="1697165244472" duration="10020000" />
       <workItem from="1697190454882" duration="8869000" />
-      <workItem from="1697258489882" duration="7631000" />
+      <workItem from="1697258489882" duration="8535000" />
+      <workItem from="1697351931055" duration="4470000" />
     </task>
     <task id="LOCAL-00001" summary="seven day">
       <option name="closed" value="true" />
@@ -440,7 +445,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697263738144</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="BD task 12">
+      <option name="closed" value="true" />
+      <created>1697267131768</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1697267131768</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -462,6 +475,7 @@
     <MESSAGE value="day eight" />
     <MESSAGE value="day ten" />
     <MESSAGE value="BD 11" />
-    <option name="LAST_COMMIT_MESSAGE" value="BD 11" />
+    <MESSAGE value="BD task 12" />
+    <option name="LAST_COMMIT_MESSAGE" value="BD task 12" />
   </component>
 </project>

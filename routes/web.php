@@ -100,4 +100,5 @@ Route::get('/timedownload',[MainController::class, 'timeDownload'])
     ->middleware('signed')->name('timeDownload');
 Route::get('/mylayout/clients',[TestController::class, 'mylayout']);
 Route::get('/testlog',[MainController::class, 'testLog']);
-Route::get('/testdb',[DBController::class, 'testDB']);
+Route::get('/commentsadd',[DBController::class, 'commentsAdd']);
+

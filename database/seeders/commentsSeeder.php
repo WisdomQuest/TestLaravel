@@ -16,7 +16,7 @@ class commentsSeeder extends Seeder
     public function run(): void
     {
         $names = ['Алексей', 'Иван', 'Петр', 'Павел', 'Юля', 'Лоя'];
-        for ($i = 0; $i < 100; $i++) {
+        for ($i = 0; $i < 10; $i++) {
             $post_id = mt_rand(1, 10);
             $name = Arr::random($names);      //получает случайный элемент из переданного массива     //$names[mt_rand(0, count($names) - 1)];
             $text = Str::random(mt_rand(30, 99)); // рандомный текст (рандомной длины)
