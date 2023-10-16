@@ -42,6 +42,7 @@ class DBController extends Controller
                     DB::update('UPDATE `comments` SET `post_id` = ? WHERE `post_id` = ?', [4, 77]);
                 });*/
 
+
         $comment = DB::select('SELECT * FROM `comments`');
         echo gettype($comment) . '<br>';
 //        var_dump($comment);
@@ -93,9 +94,9 @@ class DBController extends Controller
         abort(404);
     }
 
-    public function newsAdd($author_id= null, $title=null, $text=null)
+    public function newsAdd($author_id = null, $title = null, $text = null)
     {
-        if (isset($author_id, $title,$text)) {
+        if (isset($author_id, $title, $text)) {
 
             DB::insert('INSERT INTO `news` (`author_id`, `title`, `text`) VALUES (?,?,?)',
                 [$author_id, $title, $text]
@@ -103,6 +104,151 @@ class DBController extends Controller
             return redirect('testdatabase');
         }
         return '';
+    }
+
+    public function testQueryBuilder()
+    {
+        /*        DB::table('comments')->insert([
+                    ['post_id' => 5, 'name' => 'alla', 'text' => 'мой комментарий',],
+                    ['post_id' => 1, 'name' => 'dima', 'text' => 'dima комментарий',]
+                ]);
+
+                DB::table('comments')->where('post_id', 5)->update(['post_id' => 6]);
+                DB::table('comments')->where('post_id', 6)->increment('post_id', 6);
+                DB::table('comments')->where('post_id', 12)->delete();*/
+
+        /*        $comments = DB::table('comments')->get();
+                echo gettype($comments) . '<br />';
+                foreach ($comments as $comment) {
+                    echo $comment->post_id . '<br />';
+                    echo $comment->name . '<br />';
+                    echo $comment->text . '<br />';
+                    echo '----------------------------------------- <br />';
+                }*/
+        /*$comments=DB::table('comments')->where('post_id', 3)->get();
+        print_r($comments);
+        echo '<br />----------------------------------------- <br />';
+        $comments=DB::table('comments')->where('post_id', 3)->first();
+        print_r($comments);
+        echo '<br />----------------------------------------- <br />';
+        $comments=DB::table('comments')->where('post_id', '>',3)->get();
+        print_r($comments);
+        echo '<br />----------------------------------------- <br />';*/
+
+        /*    $comments=DB::table('comments')->where('name', 'LIKE','%ек%')->get();
+            print_r($comments);
+            echo '<br />----------------------------------------- <br />';*/
+
+        /*        $comments=DB::table('comments')
+                    ->where('post_id', '>','3')
+                    ->where('name','Павел')
+                    ->get();
+        //        SELECT *FROM `comments` WHERE `post_id` > 3 AND `name` = 'Павел'
+                print_r($comments);
+                echo '<br />----------------------------------------- <br />';*/
+
+
+//        $comments=DB::table('comments')->whereBetween('id',[2,4] )->get();
+//        print_r($comments);
+//        echo '<br />----------------------------------------- <br />';
+//        $comments=DB::table('comments')->whereNotBetween('id',[2,4] )->get();
+//        print_r($comments);
+//        echo '<br />----------------------------------------- <br />';
+
+        /*        $comments = DB::table('comments')->whereIn('id', [2, 6])->get();
+        //        SELECT *FROM `comments` WHERE `id` IN (2, 6)
+                print_r($comments);
+                echo '<br />----------------------------------------- <br />';*/
+
+        /* $comments = DB::table('comments')->whereNotNull('post_id')->get();
+         print_r($comments);
+         echo '<br />----------------------------------------- <br />';
+         $comments = DB::table('comments')->whereNull('post_id')->get();
+         print_r($comments);
+         echo '<br />----------------------------------------- <br />';*/
+
+        /*        $comments = DB::table('comments')
+                    ->where('post_id', 3)
+                    ->orWhere('post_id', 10)
+                    ->get();
+                print_r($comments);
+                echo '<br />----------------------------------------- <br />';*/
+
+        /*  $comments = DB::table('comments')->where(function ($query) {
+              $query->where('post_id', 3)->where('name', 'Иван');
+          })->orWhere('post_id', 10)
+              ->get();
+          print_r($comments);
+          echo '<br />----------------------------------------- <br />';*/
+
+        //запись по id
+       /* $comments = DB::table('comments')->find(4);
+        print_r($comments);
+        echo '<br />----------------------------------------- <br />';*/
+
+       /* $comments = DB::table('comments')->select(['id', 'name'])->where('post_id', 1)->get();
+        print_r($comments);
+        echo '<br />----------------------------------------- <br />';*/
+
+/*//сортировка по возрастанию
+        $comments=DB::table('comments')->orderBy('name')->get();
+        print_r($comments);
+        echo '<br />----------------------------------------- <br />';
+//сортировка по убыванию
+ $comments=DB::table('comments')->orderByDesc('name')->get();
+        print_r($comments);
+        echo '<br />----------------------------------------- <br />';*/
+
+/*        $comments=DB::table('comments')->inRandomOrder()->get();
+        print_r($comments);
+        echo '<br />----------------------------------------- <br />';*/
+
+//сортировка по возрастанию
+/*        $comments=DB::table('comments')->orderBy('name')->orderBy('id')->get();
+        print_r($comments);
+        echo '<br />----------------------------------------- <br />';*/
+
+/*        $comments=DB::table('comments')->limit(3)->offset(4)->get();
+        print_r($comments);
+        echo '<br />----------------------------------------- <br />';*/
+
+   /*    echo DB::table('comments')->count() . '<br />';
+       echo DB::table('comments')->where('post_id', 1)->count()  . '<br />';
+       echo DB::table('comments')->max('post_id')  . '<br />';
+       echo DB::table('comments')->avg('post_id')  . '<br />';
+       echo DB::table('comments')->sum('post_id')  . '<br />';
+       //проверяет существует ли запись
+       echo DB::table('comments')->where('post_id', 12)->exists()  . '<br />';*/
+
+       //отладка
+     /*  DB::table('comments')->where('post_id', 3)->dd();*/
+
+        // извлекает колличеством по сount записи... для очень большой выборки..
+        DB::table('comments')->orderBy('id')->chunk(3, function ($comments) {
+            foreach ($comments as $comment) {
+                print_r($comment);
+                echo '<br />';
+            }
+            echo '<br />------------------- <br>';
+        });
+
+        //извлечение по одной записи. удобнее писать чем chunk ,но медленнее
+        DB::table('comments')->orderBy('id')->lazy()->each(function ($comment) {
+            print_r($comment);
+            echo '<br />';
+        });
+
+        return '';
+    }
+
+    public function news()
+    {
+        $news = DB::table('news')->get();
+
+        $sortUp = DB::table('news')->orderBy('author_id')->get();
+        $sortDown = DB::table('news')->orderByDesc('author_id')->get();
+
+        return view('news' ,['news'=> $news, 'sortUp'=>$sortUp, 'sortDown'=> $sortDown]);
     }
 
 

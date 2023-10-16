@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2dfab0b2-bf5f-4fa9-9ef5-eeb55e0a026f" name="Changes" comment="BD homework 12">
-      <change afterPath="$PROJECT_DIR$/resources/views/testDatabase.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/news.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DBController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DBController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
@@ -345,6 +345,7 @@
       <workItem from="1697190454882" duration="8869000" />
       <workItem from="1697258489882" duration="8535000" />
       <workItem from="1697351931055" duration="22769000" />
+      <workItem from="1697429900472" duration="8939000" />
     </task>
     <task id="LOCAL-00001" summary="seven day">
       <option name="closed" value="true" />
@@ -458,7 +459,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697357937917</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="BD homework 12">
+      <option name="closed" value="true" />
+      <created>1697429935911</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1697429935912</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

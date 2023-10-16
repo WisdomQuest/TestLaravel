@@ -104,6 +104,8 @@ Route::get('/commentsadd', [DBController::class, 'commentsAdd']);
 Route::get('/testdatabase', [DBController::class, 'testDatabase']);
 Route::get('/testdatabase/{table}/{id}/delete', [DBController::class, 'testDatabaseDelete']);
 Route::get('/testdatabase/news/add/{author_id?}/{title?}/{text?}',[DBController::class, 'newsAdd'] );
+Route::get('/testquerybuilder',[DBController::class, 'testQueryBuilder']);
+Route::get('/news',[DBController::class, 'news']);
 
 
 
