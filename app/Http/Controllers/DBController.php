@@ -33,14 +33,14 @@ class DBController extends Controller
 
 //        echo DB::delete('DELETE FROM `comments` WHERE `name` = :name', ['name' => 'Иван']);
 
-/*        DB::insert('INSERT INTO `comments`(`post_id`, `name`, `text`) VALUES (?, ?, ?)', [2, 'Ola', 'text text']);
-        DB::update('UPDATE `comments` SET `post_id` = ? WHERE `post_id` = ?', [4, 2]);*/
+        /*        DB::insert('INSERT INTO `comments`(`post_id`, `name`, `text`) VALUES (?, ?, ?)', [2, 'Ola', 'text text']);
+                DB::update('UPDATE `comments` SET `post_id` = ? WHERE `post_id` = ?', [4, 2]);*/
 
         //выполниться либо все лбо ничего
-/*        DB::transaction(function () {
-            DB::insert('INSERT INTO `comments`(`post_id`, `name`, `text`) VALUES (?, ?, ?)', [1, 'Ola', 'text text']);
-            DB::update('UPDATE `comments` SET `post_id` = ? WHERE `post_id` = ?', [4, 77]);
-        });*/
+        /*        DB::transaction(function () {
+                    DB::insert('INSERT INTO `comments`(`post_id`, `name`, `text`) VALUES (?, ?, ?)', [1, 'Ola', 'text text']);
+                    DB::update('UPDATE `comments` SET `post_id` = ? WHERE `post_id` = ?', [4, 77]);
+                });*/
 
         $comment = DB::select('SELECT * FROM `comments`');
         echo gettype($comment) . '<br>';
@@ -50,6 +50,57 @@ class DBController extends Controller
             echo $com->name . '<br>';
             echo $com->text . '<br>';
             echo '------------------------';
+        }
+        return '';
+    }
+
+    public function testDatabase()
+    {
+
+        $users = DB::table('users')->get();
+        $news = DB::table('news')->get();
+        $authors = DB::table('authors')->get();
+        $comments = DB::table('comments')->get();
+
+//        return view('user.index', ['users' => $users]);
+        return view('testDatabase', [
+            'users' => $users,
+            'news' => $news,
+            'authors' => $authors,
+            'comments' => $comments
+        ]);
+    }
+
+    public function testDatabaseDelete($table, $id)
+    {
+        $users = DB::table('users')->find($id);
+        $news = DB::table('news')->find($id);
+        $authors = DB::table('authors')->find($id);
+        $comments = DB::table('comments')->find($id);
+        if (isset($users) && $table == 'users') {
+            DB::delete('DELETE FROM `users` WHERE `id`= :id', ['id' => $id]);
+            return 'запись удаленна';
+        } elseif (isset($news) && $table == 'news') {
+            DB::delete('DELETE FROM `news` WHERE `id`= :id', ['id' => $id]);
+            return 'запись удаленна';
+        } elseif (isset($authors) && $table == 'authors') {
+            DB::delete('DELETE FROM `authors` WHERE `id`= :id', ['id' => $id]);
+            return 'запись удаленна';
+        } elseif (isset($comments) && $table == 'comments') {
+            DB::delete('DELETE FROM `comments` WHERE `id`= :id', ['id' => $id]);
+            return 'запись удаленна';
+        }
+        abort(404);
+    }
+
+    public function newsAdd($author_id= null, $title=null, $text=null)
+    {
+        if (isset($author_id, $title,$text)) {
+
+            DB::insert('INSERT INTO `news` (`author_id`, `title`, `text`) VALUES (?,?,?)',
+                [$author_id, $title, $text]
+            );
+            return redirect('testdatabase');
         }
         return '';
     }
