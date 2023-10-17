@@ -18,12 +18,6 @@ return new class extends Migration
             $table->string('text', 1000);
             $table->timestamps();
         });
-
-        //добавление столбца в таблицу
-//        Schema::table('comments',function (Blueprint $table) {
-//            $table->integer('post_id');
-//        });
-
     }
 
     /**

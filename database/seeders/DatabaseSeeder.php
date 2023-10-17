@@ -21,8 +21,9 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call([
-            commentsSeeder::class,
-            AuthorsSeeder::class,
+            CommentSeeder::class,
+//            AuthorsSeeder::class,
+            AuthorSeeder::class,
             NewsSeeder::class,
             UsersSeeder::class,
             PostSeeder::class,

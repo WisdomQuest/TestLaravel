@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use http\Client\Curl\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -14,7 +15,9 @@ class UsersSeeder extends Seeder
      */
     public function run(): void
     {
-        for ($i = 0; $i < 10; $i++) {
+        \App\Models\User::factory()->count(10)->create();
+
+/*        for ($i = 0; $i < 10; $i++) {
             $name=fake()->name();
             $email = fake()->unique()->safeEmail();
             $email_verified_at = now();
@@ -28,6 +31,6 @@ class UsersSeeder extends Seeder
                 'password' => $password, // password
                 'remember_token' =>$remember_token ,
             ]);
-        }
+        }*/
     }
 }
