@@ -10,7 +10,32 @@
             border-radius: 3px;
             border-color: #f5c6cb;
         }
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 1rem;
+        }
+        nav a, nav span {
+            margin: 0 1rem;
+            padding: 1rem;
+            text-decoration: none;
+            color: #007bFF;
+            border: 1px solid #7abaff;
+            border-radius: 5px;
+            transition: 0.5s all ease;
+        }
+        nav span {
+            color: #721c24;
+            border-color: #721c24;
+        }
+        nav a:hover {
+            background-color: #007bFF;
+            color: #fff;
+        }
     </style>
+
 </head>
 
 <body>
@@ -24,12 +49,21 @@
             <th>created_at</th>
         </tr>
 
-        @if(isset($_GET['sortUp']))
+{{--        @if(isset($_GET['sortUp']))
             @php $news = $sortUp; @endphp
         @endif
            @if(isset($_GET['sortDown']))
             @php $news = $sortDown; @endphp
-        @endif
+        @endif--}}
+
+{{--    @if(isset($_GET['sortUp']))--}}
+{{--            @php $news = $sortUp; @endphp--}}
+{{--        @endif--}}
+{{--           @if(isset($_GET['sortDown']))--}}
+{{--            @php $news = $sortDown; @endphp--}}
+{{--        @endif--}}
+
+
 
 
         @foreach($news as $new)
@@ -43,8 +77,11 @@
             </tr>
         @endforeach
     </table>
-    <a href="/news?sortUp">по возрастанию</a>
-    <a href="/news?sortDown">по убыванию</a>
+{{--    <a href="/news?sortUp">по возрастанию</a>--}}
+{{--    <a href="/news?sortDown">по убыванию</a>--}}
+</div>
+<div>
+        {{$news->links('mypagination')}}
 </div>
 
 </body>

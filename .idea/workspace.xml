@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dfab0b2-bf5f-4fa9-9ef5-eeb55e0a026f" name="Changes" comment="BD homework 12">
-      <change afterPath="$PROJECT_DIR$/resources/views/news.blade.php" afterDir="false" />
+    <list default="true" id="2dfab0b2-bf5f-4fa9-9ef5-eeb55e0a026f" name="Changes" comment="BD homework 13">
+      <change afterPath="$PROJECT_DIR$/resources/views/mypagination.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pagination.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DBController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DBController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/NewsSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/NewsSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/commentsSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/commentsSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/news.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -345,7 +349,8 @@
       <workItem from="1697190454882" duration="8869000" />
       <workItem from="1697258489882" duration="8535000" />
       <workItem from="1697351931055" duration="22769000" />
-      <workItem from="1697429900472" duration="8939000" />
+      <workItem from="1697429900472" duration="18077000" />
+      <workItem from="1697511879057" duration="599000" />
     </task>
     <task id="LOCAL-00001" summary="seven day">
       <option name="closed" value="true" />
@@ -467,7 +472,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697429935912</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="BD homework 13">
+      <option name="closed" value="true" />
+      <created>1697440066029</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1697440066029</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -491,6 +504,7 @@
     <MESSAGE value="BD 11" />
     <MESSAGE value="BD task 12" />
     <MESSAGE value="BD homework 12" />
-    <option name="LAST_COMMIT_MESSAGE" value="BD homework 12" />
+    <MESSAGE value="BD homework 13" />
+    <option name="LAST_COMMIT_MESSAGE" value="BD homework 13" />
   </component>
 </project>

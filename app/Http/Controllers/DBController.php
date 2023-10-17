@@ -182,46 +182,46 @@ class DBController extends Controller
           echo '<br />----------------------------------------- <br />';*/
 
         //запись по id
-       /* $comments = DB::table('comments')->find(4);
-        print_r($comments);
-        echo '<br />----------------------------------------- <br />';*/
+        /* $comments = DB::table('comments')->find(4);
+         print_r($comments);
+         echo '<br />----------------------------------------- <br />';*/
 
-       /* $comments = DB::table('comments')->select(['id', 'name'])->where('post_id', 1)->get();
-        print_r($comments);
-        echo '<br />----------------------------------------- <br />';*/
+        /* $comments = DB::table('comments')->select(['id', 'name'])->where('post_id', 1)->get();
+         print_r($comments);
+         echo '<br />----------------------------------------- <br />';*/
 
-/*//сортировка по возрастанию
-        $comments=DB::table('comments')->orderBy('name')->get();
-        print_r($comments);
-        echo '<br />----------------------------------------- <br />';
-//сортировка по убыванию
- $comments=DB::table('comments')->orderByDesc('name')->get();
-        print_r($comments);
-        echo '<br />----------------------------------------- <br />';*/
+        /*//сортировка по возрастанию
+                $comments=DB::table('comments')->orderBy('name')->get();
+                print_r($comments);
+                echo '<br />----------------------------------------- <br />';
+        //сортировка по убыванию
+         $comments=DB::table('comments')->orderByDesc('name')->get();
+                print_r($comments);
+                echo '<br />----------------------------------------- <br />';*/
 
-/*        $comments=DB::table('comments')->inRandomOrder()->get();
-        print_r($comments);
-        echo '<br />----------------------------------------- <br />';*/
+        /*        $comments=DB::table('comments')->inRandomOrder()->get();
+                print_r($comments);
+                echo '<br />----------------------------------------- <br />';*/
 
 //сортировка по возрастанию
-/*        $comments=DB::table('comments')->orderBy('name')->orderBy('id')->get();
-        print_r($comments);
-        echo '<br />----------------------------------------- <br />';*/
+        /*        $comments=DB::table('comments')->orderBy('name')->orderBy('id')->get();
+                print_r($comments);
+                echo '<br />----------------------------------------- <br />';*/
 
-/*        $comments=DB::table('comments')->limit(3)->offset(4)->get();
-        print_r($comments);
-        echo '<br />----------------------------------------- <br />';*/
+        /*        $comments=DB::table('comments')->limit(3)->offset(4)->get();
+                print_r($comments);
+                echo '<br />----------------------------------------- <br />';*/
 
-   /*    echo DB::table('comments')->count() . '<br />';
-       echo DB::table('comments')->where('post_id', 1)->count()  . '<br />';
-       echo DB::table('comments')->max('post_id')  . '<br />';
-       echo DB::table('comments')->avg('post_id')  . '<br />';
-       echo DB::table('comments')->sum('post_id')  . '<br />';
-       //проверяет существует ли запись
-       echo DB::table('comments')->where('post_id', 12)->exists()  . '<br />';*/
+        /*    echo DB::table('comments')->count() . '<br />';
+            echo DB::table('comments')->where('post_id', 1)->count()  . '<br />';
+            echo DB::table('comments')->max('post_id')  . '<br />';
+            echo DB::table('comments')->avg('post_id')  . '<br />';
+            echo DB::table('comments')->sum('post_id')  . '<br />';
+            //проверяет существует ли запись
+            echo DB::table('comments')->where('post_id', 12)->exists()  . '<br />';*/
 
-       //отладка
-     /*  DB::table('comments')->where('post_id', 3)->dd();*/
+        //отладка
+        /*  DB::table('comments')->where('post_id', 3)->dd();*/
 
         // извлекает колличеством по сount записи... для очень большой выборки..
         DB::table('comments')->orderBy('id')->chunk(3, function ($comments) {
@@ -243,13 +243,22 @@ class DBController extends Controller
 
     public function news()
     {
-        $news = DB::table('news')->get();
-
-        $sortUp = DB::table('news')->orderBy('author_id')->get();
-        $sortDown = DB::table('news')->orderByDesc('author_id')->get();
-
-        return view('news' ,['news'=> $news, 'sortUp'=>$sortUp, 'sortDown'=> $sortDown]);
+        $news = DB::table('news')->paginate(5);
+//        $sortUp = $news->items();
+//        $sortDown = $news->items();
+//        $sortUp = DB::table('news')->orderBy('author_id')->paginate(5);
+//        $sortDown = DB::table('news')->orderByDesc('author_id')->paginate(5);
+//        'sortUp' => $sortUp, 'sortDown' => $sortDown
+        return view('news', ['news' => $news, ]);
     }
 
+    public function testPagination()
+    {
+        $comment = 'comments';
+        $comments = DB::table($comment)->paginate(10);
+
+
+        return view('pagination', ['comments' => $comments]);
+    }
 
 }

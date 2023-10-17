@@ -14,7 +14,7 @@ class NewsSeeder extends Seeder
      */
     public function run(): void
     {
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 0; $i < 100; $i++) {
             $author_id = mt_rand(1, 10);
             $title = STR::random(mt_rand(3, 15));
             $text = STR::random(mt_rand(3, 100));
