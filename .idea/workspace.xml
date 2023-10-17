@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dfab0b2-bf5f-4fa9-9ef5-eeb55e0a026f" name="Changes" comment="BD homework 13">
-      <change afterPath="$PROJECT_DIR$/resources/views/mypagination.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pagination.blade.php" afterDir="false" />
+    <list default="true" id="2dfab0b2-bf5f-4fa9-9ef5-eeb55e0a026f" name="Changes" comment="bd 14">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DBController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DBController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/NewsSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/NewsSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/commentsSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/commentsSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/news.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +22,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="nineTask" />
+        <entry key="$PROJECT_DIR$" value="DB" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -350,7 +344,7 @@
       <workItem from="1697258489882" duration="8535000" />
       <workItem from="1697351931055" duration="22769000" />
       <workItem from="1697429900472" duration="18077000" />
-      <workItem from="1697511879057" duration="599000" />
+      <workItem from="1697511879057" duration="5028000" />
     </task>
     <task id="LOCAL-00001" summary="seven day">
       <option name="closed" value="true" />
@@ -480,7 +474,23 @@
       <option name="project" value="LOCAL" />
       <updated>1697440066029</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="bd 14">
+      <option name="closed" value="true" />
+      <created>1697512500089</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1697512500089</updated>
+    </task>
+    <task id="LOCAL-00018" summary="bd 14">
+      <option name="closed" value="true" />
+      <created>1697512506640</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1697512506640</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -505,6 +515,7 @@
     <MESSAGE value="BD task 12" />
     <MESSAGE value="BD homework 12" />
     <MESSAGE value="BD homework 13" />
-    <option name="LAST_COMMIT_MESSAGE" value="BD homework 13" />
+    <MESSAGE value="bd 14" />
+    <option name="LAST_COMMIT_MESSAGE" value="bd 14" />
   </component>
 </project>
