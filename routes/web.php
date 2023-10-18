@@ -112,6 +112,7 @@ Route::get('testpagination',[DBController::class, 'testPagination']);
 Route::get('testmodel',[PostController::class, 'testModel']);
 Route::get('/news/{id}/delete',[NewsController::class, 'deleteNews']);
 Route::get('testam',[PostController::class, 'testAM']);
+Route::get('testobserver',[PostController::class, 'testObserver']);
 
 
 

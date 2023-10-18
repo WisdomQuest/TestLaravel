@@ -106,4 +106,29 @@ class PostController extends Controller
         return '';
     }
 
+    public function testAM()
+    {
+        $post = Post::find(1);
+        echo $post->author;
+        $post->author = 'Новый автор';
+        $post->save();
+
+        echo '<br>' . gettype($post->is_publish);
+        return '';
+    }
+
+    public function testObserver()
+    {
+        $post =Post::factory()->make();
+        $post->title = 'Важный пост';
+        $post->save();
+
+        $post =Post::orderByDesc('id')->first();
+        $post->author = 'vov';
+        $post->save();
+        $post->delete();
+        $post->restore();
+        $post->forceDelete();
+        return 'testobserver';
+    }
 }
