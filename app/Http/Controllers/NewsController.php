@@ -10,30 +10,31 @@ class NewsController extends Controller
 {
     public function news()
     {
-//        $news = DB::table('news')->paginate(5);
-//        $new = News::where('author_id', 5)->first();
-//        $new->author_id = '1';
-//        $new->save();
+
         $news = News::paginate(5);
+        $sort = clone $news;
         if (isset($_GET['sortUp'])) {
             $news = $news->sortBy('author_id');
         } elseif (isset($_GET['sortDown'])) {
             $news = $news->sortByDesc('author_id');
         }
+        $page = 1;
+        if (isset($_GET['page'])) {
+            $page = $_GET['page'];
+        }
 
-        /*        $news = News::query();
-                if (isset($_GET['sortUp'])) {
-                    $news = $news->orderBy('author_id');
-                }
-                $news = $news->paginate(5);*/
-
-        return view('news', ['news' => $news,]);
+        return view('news', ['news' => $news, 'sort' => $sort, 'page' => $page]);
     }
 
     public function deleteNews($id)
     {
-        $new = News::find($id);
-        return 1;
+        $news = News::find($id);
+        if (isset($news)){
+        News::destroy($id);
+        return 'delete';
+        }
+        abort(404);
+
 
 
     }

@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Post extends Model
 {
     use HasFactory;
-    use SoftDeletes;
+//    use SoftDeletes;
     //   protected $table = 'postsss'; если нужно изменить название таблицы что указано в миграции posts Schema::create('posts'..
     //   public $timestamps = false; убирает в таблице $timestamps.. в наполнении миграции create_posts нужно закоментить
     //   protected $primaryKey = 'alias'; меняет первичный ключ. название столбца id

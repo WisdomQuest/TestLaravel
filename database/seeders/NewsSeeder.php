@@ -17,7 +17,7 @@ class NewsSeeder extends Seeder
     {
 
 
-        News::factory()->count(200)->create();
+        News::factory()->count(100)->create();
 
 
 //        for ($i = 0; $i < 100; $i++) {

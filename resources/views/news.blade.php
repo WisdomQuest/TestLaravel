@@ -10,6 +10,7 @@
             border-radius: 3px;
             border-color: #f5c6cb;
         }
+
         nav {
             display: flex;
             justify-content: center;
@@ -17,6 +18,7 @@
             width: 100%;
             padding: 1rem;
         }
+
         nav a, nav span {
             margin: 0 1rem;
             padding: 1rem;
@@ -26,10 +28,12 @@
             border-radius: 5px;
             transition: 0.5s all ease;
         }
+
         nav span {
             color: #721c24;
             border-color: #721c24;
         }
+
         nav a:hover {
             background-color: #007bFF;
             color: #fff;
@@ -48,24 +52,6 @@
             <th>text</th>
             <th>created_at</th>
         </tr>
-
-{{--        @if(isset($_GET['sortUp']))
-            @php $news = $sortUp; @endphp
-        @endif
-           @if(isset($_GET['sortDown']))
-            @php $news = $sortDown; @endphp
-        @endif--}}
-
-{{--    @if(isset($_GET['sortUp']))--}}
-{{--            @php $news = $sortUp; @endphp--}}
-{{--        @endif--}}
-{{--           @if(isset($_GET['sortDown']))--}}
-{{--            @php $news = $sortDown; @endphp--}}
-{{--        @endif--}}
-
-
-
-
         @foreach($news as $new)
             <tr>
                 <td>{{$new->id}}</td>
@@ -73,15 +59,18 @@
                 <td> {{$new->title}}</td>
                 <td> {{$new->text}}</td>
                 <td>  {{$new->created_at}}</td>
-                <td><a href="/testdatabase/{{'news'}}/{{$new->id}}/delete">удалить</a></td>
+                <td><a href="/news/{{$new->id}}/delete">удалить</a></td>
             </tr>
         @endforeach
     </table>
-    <a href="/news?sortUp">по возрастанию</a>
-    <a href="/news?sortDown">по убыванию</a>
+    <a href="/news?page={{$page}}&sortUp">по возрастанию</a>
+
+    <a href="/news?page={{$page}}&sortDown">по убыванию</a>
 </div>
 <div>
-        {{$news->links('mypagination')}}
+
+    {{$sort->links('mypagination')}}
+
 </div>
 
 </body>

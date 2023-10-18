@@ -110,7 +110,8 @@ Route::get('/testquerybuilder',[DBController::class, 'testQueryBuilder']);
 Route::get('/news',[NewsController::class, 'news']);
 Route::get('testpagination',[DBController::class, 'testPagination']);
 Route::get('testmodel',[PostController::class, 'testModel']);
-Route::get('/news/delete',[NewsController::class, 'deleteNews']);
+Route::get('/news/{id}/delete',[NewsController::class, 'deleteNews']);
+Route::get('testam',[PostController::class, 'testAM']);
 
 
 
