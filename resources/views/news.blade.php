@@ -77,8 +77,8 @@
             </tr>
         @endforeach
     </table>
-{{--    <a href="/news?sortUp">по возрастанию</a>--}}
-{{--    <a href="/news?sortDown">по убыванию</a>--}}
+    <a href="/news?sortUp">по возрастанию</a>
+    <a href="/news?sortDown">по убыванию</a>
 </div>
 <div>
         {{$news->links('mypagination')}}

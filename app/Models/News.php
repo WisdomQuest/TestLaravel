@@ -12,4 +12,5 @@ class News extends Model
 //        'author_id' => 'Гость',
         ];
 
+
 }
