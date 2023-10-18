@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 class NewsController extends Controller
 {
-    public function news()
+    public function news(Request $request)
     {
 
         $news = News::paginate(5);
@@ -22,8 +22,9 @@ class NewsController extends Controller
         if (isset($_GET['page'])) {
             $page = $_GET['page'];
         }
-
-        return view('news', ['news' => $news, 'sort' => $sort, 'page' => $page]);
+        echo $request->ip();
+//        $news->dd();
+        return view('news', ['news' => $news, 'sort' => $sort, 'page' => $page, 'request'=> $request]);
     }
 
     public function deleteNews($id)
@@ -34,9 +35,13 @@ class NewsController extends Controller
         return 'delete';
         }
         abort(404);
+    }
 
-
-
+    public function newsAttribute()
+    {
+        $news = News::find(7);
+        echo $news->title;
+        return '';
     }
 
 }

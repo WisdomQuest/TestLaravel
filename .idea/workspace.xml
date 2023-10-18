@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dfab0b2-bf5f-4fa9-9ef5-eeb55e0a026f" name="Changes" comment="bd 15 hm end">
+    <list default="true" id="2dfab0b2-bf5f-4fa9-9ef5-eeb55e0a026f" name="Changes" comment="model 16">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/News.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/News.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -348,7 +348,7 @@
       <workItem from="1697351931055" duration="22769000" />
       <workItem from="1697429900472" duration="18077000" />
       <workItem from="1697511879057" duration="24517000" />
-      <workItem from="1697605005028" duration="12438000" />
+      <workItem from="1697605005028" duration="16720000" />
     </task>
     <task id="LOCAL-00001" summary="seven day">
       <option name="closed" value="true" />
@@ -550,7 +550,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697612974530</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="model 16">
+      <option name="closed" value="true" />
+      <created>1697617945853</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1697617945853</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -579,6 +587,7 @@
     <MESSAGE value="bd 14 hm 1" />
     <MESSAGE value="bd 14 hm end" />
     <MESSAGE value="bd 15 hm end" />
-    <option name="LAST_COMMIT_MESSAGE" value="bd 15 hm end" />
+    <MESSAGE value="model 16" />
+    <option name="LAST_COMMIT_MESSAGE" value="model 16" />
   </component>
 </project>

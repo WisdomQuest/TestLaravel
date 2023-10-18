@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Models\News;
 use App\Models\Post;
+use App\Observers\NewsObserver;
 use App\Observers\PostObserver;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
@@ -29,6 +31,7 @@ class EventServiceProvider extends ServiceProvider
     {
         //связка модели и обсервера(наблюдателя)
         Post::observe(PostObserver::class);
+        News::observe(NewsObserver::class);
     }
 
     /**
