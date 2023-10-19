@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class NumberPhone extends Model
 {
     use HasFactory;
+
+    public function author()
+    {
+        return $this->hasOne(Author::class, 'phone_id');
+    }
 }

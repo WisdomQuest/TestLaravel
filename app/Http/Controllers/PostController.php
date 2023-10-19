@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Address;
+use App\Models\Author;
 use App\Models\Client;
+use App\Models\NumberPhone;
 use App\Models\Order;
 use App\Models\Post;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -163,6 +165,19 @@ class PostController extends Controller
         return '';
     }
 
+    public function testPhone()
+    {
+        /*$author = Author::find(1);
+        echo $author->phone->phone . '<br />';
+        echo '-------------- <br />';
 
+        $phone = NumberPhone::find(1);
+        echo $phone->author->id;*/
+
+        $authors = Author::all();
+
+
+        return view('author', ['author'=>$authors]);
+    }
 
 }

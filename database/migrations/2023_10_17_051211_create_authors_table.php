@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->integer('user_id');
             $table->integer('work_experience');
+            $table->integer('phone_id');
             $table->timestamps();
         });
     }

@@ -17,8 +17,8 @@ class CommentFactory extends Factory
     public function definition(): array
     {
         return [
-            'post_id' => mt_rand(1, 10),
-            'name' => $this->faker->name(),
+            'user_id' => $this->faker->unique()->randomElement(range(1,10)), //mt_rand(1, 10),
+//            'name' => $this->faker->name(),
             'text' => $this->faker->text(100),
         ];
     }

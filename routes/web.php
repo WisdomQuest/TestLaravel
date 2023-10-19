@@ -115,6 +115,7 @@ Route::get('testam',[PostController::class, 'testAM']);
 Route::get('testobserver',[PostController::class, 'testObserver']);
 Route::get('/newsattribute',[NewsController::class, 'newsAttribute']);
 Route::get('/testrelations',[PostController::class, 'testRelations']);
+Route::get('/testphone',[PostController::class, 'testPhone']);
 
 
 

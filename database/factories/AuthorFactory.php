@@ -17,8 +17,9 @@ class AuthorFactory extends Factory
     public function definition(): array
     {
         return [
-            'user_id' => mt_rand(1,10),
+            'user_id' => mt_rand(1, 10),
             'work_experience' => $this->faker->randomDigit(),
+            'phone_id' =>  $this->faker->unique()->numberBetween(1,10),//$this->faker->unique()->randomElement(range(1,10)), //range — Создаёт массив, содержащий диапазон элементов
         ];
     }
 }
