@@ -177,7 +177,7 @@ class PostController extends Controller
         $authors = Author::all();
 
 
-        return view('author', ['author'=>$authors]);
+        return view('author', ['authors'=>$authors]);
     }
 
 }
