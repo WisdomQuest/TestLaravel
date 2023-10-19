@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Address;
+use App\Models\Client;
 use App\Models\Post;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Http\Request;
@@ -131,4 +133,26 @@ class PostController extends Controller
         $post->forceDelete();
         return 'testobserver';
     }
+
+    public function testRelations()
+    {
+        $client = Client::find(1);
+        echo $client->name . '<br />';
+        echo  $client->address->address. '<br />';
+        echo '---------------------------- <br>';
+
+        $address = Address::find(3);
+        echo $address->address . '<br />';
+        echo $address->client->name . '<br />';
+
+        /*$add = Address::find(11);
+        $add->id = 10;
+        $add->save();*/
+
+
+        return '';
+    }
+
+
+
 }
