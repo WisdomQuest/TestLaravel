@@ -17,7 +17,7 @@
             <th>телефон</th>
 
         </tr>
-        @foreach($author as $author)
+        @foreach($authors as $author)
             <tr>
                 <td>{{$author->id}}</td>
                 <td>  {{$author->work_experience}}</td>
