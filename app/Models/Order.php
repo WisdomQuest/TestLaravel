@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     use HasFactory;
+
+    public function client()
+    {
+        return $this->belongsTo(Client::class); // получаем из Order ссылку на клиента
+    }
+
+
 }

@@ -28,6 +28,8 @@ class DatabaseSeeder extends Seeder
             PostSeeder::class,
             AddressSeeder::class,
             ClientSeeder::class,
+            OrderSeeder::class,
+            NumberPhoneSeeder::class,
         ]);
     }
 }

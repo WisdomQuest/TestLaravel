@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Address;
 use App\Models\Client;
+use App\Models\Order;
 use App\Models\Post;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Http\Request;
@@ -149,7 +150,16 @@ class PostController extends Controller
         $add->id = 10;
         $add->save();*/
 
+        echo '-------------------------------------------------- <br>';
+        echo '-------------------------------------------------- <br>';
 
+        $orders = Client::find(4)->orders;
+        foreach ($orders as $order) {
+            echo $order->id . '<br />';
+        }
+
+        $client = Order::find(1);
+        echo $client->client->name . '<br />';
         return '';
     }
 

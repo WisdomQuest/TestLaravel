@@ -2,18 +2,17 @@
 
 namespace Database\Seeders;
 
-use App\Models\Order;
-use Database\Factories\OrderFactory;
+use App\Models\NumberPhone;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class OrderSeeder extends Seeder
+class NumberPhoneSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        Order::factory()->count(30)->create();
+        NumberPhone::factory()->count(10)->create();
     }
 }
