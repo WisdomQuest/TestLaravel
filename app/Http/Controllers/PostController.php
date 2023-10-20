@@ -5,9 +5,12 @@ namespace App\Http\Controllers;
 use App\Models\Address;
 use App\Models\Author;
 use App\Models\Client;
+use App\Models\Comment;
 use App\Models\NumberPhone;
 use App\Models\Order;
 use App\Models\Post;
+use App\Models\Product;
+use App\Models\User;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Http\Request;
 
@@ -103,7 +106,7 @@ class PostController extends Controller
 
         echo '----------------------------------------<br />';
 
-        $posts = Post::where('id','>', 3)->get();
+        $posts = Post::where('id', '>', 3)->get();
         foreach ($posts as $post) {
             echo $post->author . '<br />';
         }
@@ -124,11 +127,11 @@ class PostController extends Controller
 
     public function testObserver()
     {
-        $post =Post::factory()->make();
+        $post = Post::factory()->make();
         $post->title = 'Важный пост';
         $post->save();
 
-        $post =Post::orderByDesc('id')->first();
+        $post = Post::orderByDesc('id')->first();
         $post->author = 'vov';
         $post->save();
         $post->delete();
@@ -141,7 +144,7 @@ class PostController extends Controller
     {
         $client = Client::find(1);
         echo $client->name . '<br />';
-        echo  $client->address->address. '<br />';
+        echo $client->address->address . '<br />';
         echo '---------------------------- <br>';
 
         $address = Address::find(3);
@@ -162,6 +165,27 @@ class PostController extends Controller
 
         $client = Order::find(1);
         echo $client->client->name . '<br />';
+
+        echo '<hr>';
+        echo '<hr>';
+
+        $products = Order::find(1)->products;
+        foreach ($products as $product) {
+            echo $product->title . '<br />';
+        }
+        echo '-------------------------------------------------- <br>';
+        echo '-------------------------------------------------- <br>';
+
+        $orders = Product::find(1)->orders;
+        foreach ($orders as $order) {
+            echo $order->client->name .'<br /> ';
+
+        }
+
+
+
+
+
         return '';
     }
 
@@ -177,7 +201,25 @@ class PostController extends Controller
         $authors = Author::all();
 
 
-        return view('author', ['authors'=>$authors]);
+        return view('author', ['authors' => $authors]);
     }
 
+    public function testcomment()
+    {
+//        echo Comment::find(1)->user->name;
+
+        /*        $user = User::find(8)->comments;
+                $a = User::find(8)->name;
+                echo $a;
+                foreach ($user as $value) {
+                    echo   $value->text . '<br />' ;
+                }*/
+        $comments = Comment::all();
+//        $author = Comment::all()->user->name;
+        foreach ($comments as $comment) {
+            $author = $comment->user;
+            echo $comment->text . ' автор <b>' . $author->name . '</b> дата ' . $comment->created_at . '<br />';
+        }
+        return '';
+    }
 }

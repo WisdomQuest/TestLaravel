@@ -5,16 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2dfab0b2-bf5f-4fa9-9ef5-eeb55e0a026f" name="Changes" comment="model 18 hm">
-      <change afterPath="$PROJECT_DIR$/resources/views/author.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Author.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Author.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/NumberPhone.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/NumberPhone.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/AuthorFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/AuthorFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/factories/CommentFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/CommentFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2023_10_17_051211_create_authors_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_10_17_051211_create_authors_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2023_10_17_052339_create_comments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_10_17_052339_create_comments_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2023_10_19_072535_create_number_phones_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_10_19_072535_create_number_phones_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/CommentSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/CommentSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/commentsSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/commentsSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -355,7 +354,8 @@
       <workItem from="1697429900472" duration="18077000" />
       <workItem from="1697511879057" duration="24517000" />
       <workItem from="1697605005028" duration="16860000" />
-      <workItem from="1697691063487" duration="13343000" />
+      <workItem from="1697691063487" duration="15537000" />
+      <workItem from="1697777241680" duration="3355000" />
     </task>
     <task id="LOCAL-00001" summary="seven day">
       <option name="closed" value="true" />
@@ -589,7 +589,31 @@
       <option name="project" value="LOCAL" />
       <updated>1697701090097</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="model 18 hm">
+      <option name="closed" value="true" />
+      <created>1697709008651</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1697709008651</updated>
+    </task>
+    <task id="LOCAL-00031" summary="model 18 hm">
+      <option name="closed" value="true" />
+      <created>1697709035696</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1697709035696</updated>
+    </task>
+    <task id="LOCAL-00032" summary="model 18 hm">
+      <option name="closed" value="true" />
+      <created>1697709115632</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1697709115632</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

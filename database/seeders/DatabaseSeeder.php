@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Product;
 use Illuminate\Database\Seeder;
 
 
@@ -30,6 +31,8 @@ class DatabaseSeeder extends Seeder
             ClientSeeder::class,
             OrderSeeder::class,
             NumberPhoneSeeder::class,
+            ProductSeeder::class,
+            OrderProductSeeder::class,
         ]);
     }
 }

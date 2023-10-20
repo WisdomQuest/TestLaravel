@@ -14,5 +14,9 @@ class Order extends Model
         return $this->belongsTo(Client::class); // получаем из Order ссылку на клиента
     }
 
+    public function products()
+    {
+        return $this->belongsToMany(Product::class);
+    }
 
 }
