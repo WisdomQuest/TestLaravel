@@ -14,4 +14,9 @@ class Author extends Model
         return $this->belongsTo(NumberPhone::class);
     }
 
+    public function skills()
+    {
+        return $this->belongsToMany(Skill::class);
+    }
+
 }

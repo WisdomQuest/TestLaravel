@@ -33,6 +33,8 @@ class DatabaseSeeder extends Seeder
             NumberPhoneSeeder::class,
             ProductSeeder::class,
             OrderProductSeeder::class,
+            SkillSeeder::class,
+            AuthorSkillSeeder::class,
         ]);
     }
 }

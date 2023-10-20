@@ -10,6 +10,7 @@ use App\Models\NumberPhone;
 use App\Models\Order;
 use App\Models\Post;
 use App\Models\Product;
+use App\Models\Skill;
 use App\Models\User;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Http\Request;
@@ -221,5 +222,23 @@ class PostController extends Controller
             echo $comment->text . ' автор <b>' . $author->name . '</b> дата ' . $comment->created_at . '<br />';
         }
         return '';
+    }
+
+    public function authors()
+    {
+/*        $authors =Author::find(1)->skills;
+
+        foreach ($authors as $author) {
+            echo  $author->id . '<br/>';
+        }
+        echo '<hr>';
+
+        $clients = Skill::find(1)->authors;
+        foreach ($clients as $client) {
+            echo  $client->id . '<br/>';
+        }
+        return '';*/
+
+        return view('author',['authors' => Author::all()]);
     }
 }

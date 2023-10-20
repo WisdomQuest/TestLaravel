@@ -2,17 +2,17 @@
 
 namespace Database\Seeders;
 
-use App\Models\Skill;
+use App\Models\AuthorSkill;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class SkillSeeder extends Seeder
+class AuthorSkillSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        Skill::factory()->count(15)->create();
+       AuthorSkill::factory()->count(50)->create();
     }
 }

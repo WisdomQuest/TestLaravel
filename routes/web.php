@@ -118,6 +118,7 @@ Route::get('/newsattribute',[NewsController::class, 'newsAttribute']);
 Route::get('/testrelations',[PostController::class, 'testRelations']);
 Route::get('/testphone',[PostController::class, 'testPhone']);
 Route::get('/testcomment',[PostController::class, 'testComment']);
+Route::get('/authors',[PostController::class, 'authors']);
 Route::resource('addresses', AddressController::class);
 
 

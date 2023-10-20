@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Skill>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\AuthorSkill>
  */
-class SkillFactory extends Factory
+class AuthorSkillFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +17,8 @@ class SkillFactory extends Factory
     public function definition(): array
     {
         return [
-            'skill' => $this->faker->unique()->word(),
+            'author_id' =>mt_rand(1,10),
+            'skill_id'=>mt_rand(1,15),
         ];
     }
 }

@@ -5,12 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Skill extends Model
+class AuthorSkill extends Model
 {
     use HasFactory;
 
-    public function authors()
-    {
-        return $this->belongsToMany(Author::class);
-    }
+    protected $table = 'author_skill';
 }

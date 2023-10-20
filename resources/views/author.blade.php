@@ -10,7 +10,7 @@
 
 <body>
 
-    <table>
+{{--    <table>
         <tr>
             <th>ID</th>
             <th> опыт работы</th>
@@ -26,7 +26,22 @@
 
             </tr>
         @endforeach
-    </table>
+    </table>--}}
+
+
+@foreach($authors as $author)
+    {{$author->id}}:
+    @foreach($author->skills as $skill)
+        <br />
+          {{$skill->skill}}
+
+
+
+    @endforeach
+
+    <hr />
+@endforeach
+
 
 
 </body>
