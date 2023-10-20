@@ -15,8 +15,8 @@ class News extends Model
 //        'author_id' => 'Гость',
         ];
 
-    public function getTitleAttribute($value)
+/*    public function getTitleAttribute($value)
     {
-//        return '<b>' . $value . '</b>';
-    }
+       return '<b>' . $value . '</b>';
+    }*/
 }

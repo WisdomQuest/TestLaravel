@@ -18,6 +18,7 @@ class NewsFactory extends Factory
     {
         return [
             'author_id' => mt_rand(1, 10),
+//            'title' => $this->faker->text(mt_rand(5, 20)),
             'title' => $this->faker->text(mt_rand(5, 20)),
             'text' => $this->faker->text(mt_rand(5, 100)),
         ];
