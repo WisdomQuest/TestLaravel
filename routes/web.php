@@ -7,6 +7,7 @@ use App\Http\Controllers\TestController;
 use App\Http\Controllers\DBController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\AddressController;
 
 /*
 |--------------------------------------------------------------------------
@@ -117,6 +118,6 @@ Route::get('/newsattribute',[NewsController::class, 'newsAttribute']);
 Route::get('/testrelations',[PostController::class, 'testRelations']);
 Route::get('/testphone',[PostController::class, 'testPhone']);
 Route::get('/testcomment',[PostController::class, 'testComment']);
-
+Route::resource('addresses', AddressController::class);
 
 
