@@ -9,10 +9,20 @@ use Illuminate\Support\Facades\DB;
 class NewsController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
-
-        return view('news.index', ['news'=>News::paginate(5)]);
+        $news = News::paginate(5);
+        $sort = clone $news;
+        if (isset($_GET['sortUp'])) {
+            $news = $news->sortBy('author_id');
+        } elseif (isset($_GET['sortDown'])) {
+            $news = $news->sortByDesc('author_id');
+        }
+        $page = 1;
+        if (isset($_GET['page'])) {
+            $page = $_GET['page'];
+        }
+        return view('news.index', ['news'=>$news, 'sort' => $sort, 'page' => $page, 'request'=> $request]);
     }
 
     /**

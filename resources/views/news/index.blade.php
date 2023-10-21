@@ -38,43 +38,39 @@
             background-color: #007bFF;
             color: #fff;
         }
+        a {
+            color: #af8503;  /* sets color of links */
+            text-decoration: none;  /* removes underline */
+        }
+        a:hover {
+            color: #4d79ff;  /* changes color of links when hovered over */
+        }
+        .abba{
+            color: #AA3333;  /* sets color of links */
+            text-decoration: none;  /* removes underline */
+        }
     </style>
 
 </head>
 
 <body>
 <div>
-    {{--    <table>
-            <tr>
-                <th>ID</th>
-                <th>author_id</th>
-                <th>title</th>
-                <th>text</th>
-                <th>created_at</th>
-            </tr>
-            @foreach($news as $new)
-                <tr>
-                    <td>{{$new->id}}</td>
-                    <td> {{$new->author_id}}</td>
-                    <td> {{$new->title}}</td>
-                    <td> {{$new->text}}</td>
-                    <td> {{$new->created_at}}</td>
 
-                </tr>
-            @endforeach
-        </table>--}}
 
     @foreach($news as $new)
-        <li>
 
+        <li>
             @php echo $new->Type  @endphp
-            <a href="{{route('news.show',['news'=>$new])}}"> <b>{{$new->title}} </b>--- {{$new->text}} </a>
+            <a href="{{route('news.show',['news'=>$new])}}"> {{$new->author_id}} -- <b>{{$new->title}} </b>--- {{$new->text}} </a>
         </li>
     @endforeach
 </div>
+<a href="/news?page={{$page}}&sortUp" class="abba">по возрастанию</a>
+
+<a href="/news?page={{$page}}&sortDown" class="abba">по убыванию</a>
 <div>
 
-    {{$news->links('mypagination')}}
+    {{$sort->links('mypagination')}}
 
 </div>
 
