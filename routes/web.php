@@ -8,7 +8,7 @@ use App\Http\Controllers\DBController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\AddressController;
-use App\Http\Controllers\TidingController;
+use App\Http\Controllers\FormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -122,6 +122,8 @@ Route::get('/testcomment',[PostController::class, 'testComment']);
 Route::get('/authors',[PostController::class, 'authors']);
 Route::resource('/addresses', AddressController::class);
 Route::resource('/news', NewsController::class);
+Route::get('/testform', [FormController::class, 'testForm']);
+Route::post('/testform/send', [FormController::class, 'send']);
 
 
 

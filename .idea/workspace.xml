@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dfab0b2-bf5f-4fa9-9ef5-eeb55e0a026f" name="Changes" comment="model 19 hm!!!">
+    <list default="true" id="2dfab0b2-bf5f-4fa9-9ef5-eeb55e0a026f" name="Changes" comment="form 20">
+      <change afterPath="$PROJECT_DIR$/resources/views/testform.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/news/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -353,6 +353,7 @@
       <workItem from="1697812935523" duration="3964000" />
       <workItem from="1697818627099" duration="59000" />
       <workItem from="1697882703655" duration="1224000" />
+      <workItem from="1697895829674" duration="4505000" />
     </task>
     <task id="LOCAL-00001" summary="seven day">
       <option name="closed" value="true" />
@@ -642,7 +643,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697816726715</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="form 20">
+      <option name="closed" value="true" />
+      <created>1697896047699</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1697896047700</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -678,6 +687,7 @@
     <MESSAGE value="model 19" />
     <MESSAGE value="model 19 hm" />
     <MESSAGE value="model 19 hm!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="model 19 hm!!!" />
+    <MESSAGE value="form 20" />
+    <option name="LAST_COMMIT_MESSAGE" value="form 20" />
   </component>
 </project>
