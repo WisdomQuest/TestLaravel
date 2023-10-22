@@ -34,7 +34,7 @@
     <br />
     <label for="text">Ваше сообщение:</label>
     @error('text')
-    <div style="color: #AA3333"> текст не верно заполнен</div>
+    <div style="color: #AA3333"> {{$message}}</div>
     @enderror
     <br />
     <textarea name="text" id="text" cols="30" rows="10">{{old('text')}}</textarea>

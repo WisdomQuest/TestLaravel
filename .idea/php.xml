@@ -237,6 +237,16 @@
       <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
       <path value="$PROJECT_DIR$/vendor/phar-io/version" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/archtechx/enums" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php81" />
+      <path value="$PROJECT_DIR$/vendor/laravel-lang/publisher" />
+      <path value="$PROJECT_DIR$/vendor/laravel-lang/lang" />
+      <path value="$PROJECT_DIR$/vendor/dragon-code/support" />
+      <path value="$PROJECT_DIR$/vendor/laravel-lang/http-statuses" />
+      <path value="$PROJECT_DIR$/vendor/dragon-code/pretty-array" />
+      <path value="$PROJECT_DIR$/vendor/laravel-lang/common" />
+      <path value="$PROJECT_DIR$/vendor/dragon-code/contracts" />
+      <path value="$PROJECT_DIR$/vendor/laravel-lang/attributes" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />

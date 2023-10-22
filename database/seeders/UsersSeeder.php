@@ -24,6 +24,9 @@ class UsersSeeder extends Seeder
             $password = Str::random(mt_rand(8,20));
             $remember_token = Str::random(10);
 
+
+
+
             DB::table('users')->insert([
                 'name' =>$name,
                 'email' => $email,

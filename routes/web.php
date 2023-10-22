@@ -124,6 +124,7 @@ Route::resource('/addresses', AddressController::class);
 Route::resource('/news', NewsController::class);
 Route::get('/testform', [FormController::class, 'testForm']);
 Route::post('/testform/send', [FormController::class, 'send']);
-
+Route::get('/comments', [FormController::class, 'comments']);
+Route::post('/comments/send', [FormController::class, 'commentsSend']);
 
 
