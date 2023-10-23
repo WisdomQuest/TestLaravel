@@ -11,12 +11,12 @@
 <body>
 @if($errors->any())
     <h3>Ошибки при заполнении формы</h3>
-{{--    <div>
+    <div>
         @foreach($errors->all() as $message)
             <span>{{$message}}</span>
             <br />
         @endforeach
-    </div>--}}
+    </div>
 @endif
 <h2>Заполните форму</h2>
 {{--<form name="myform" action="testform/send" method="post">--}}
@@ -46,6 +46,7 @@
     @error('bd')
     <div style="color: #AA3333"> {{$message}}</div>
     @enderror
+    <input type="hidden" name="test" value="Test" />
     <input type="submit" value="отправить">
 </form>
 

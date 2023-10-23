@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Rules\MyRule;
 use Illuminate\Foundation\Http\FormRequest;
 
 class TestFormRequest extends FormRequest
@@ -31,6 +32,7 @@ class TestFormRequest extends FormRequest
             'name' => 'required| min:2|max:100',
             'text' => 'required|max:100',
             'bd' => 'nullable|date',
+            'test' => [new MyRule()] // в массиве указывать свое созданное правило
         ];
     }
 
