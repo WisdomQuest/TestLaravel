@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dfab0b2-bf5f-4fa9-9ef5-eeb55e0a026f" name="Changes" comment="form 20">
-      <change beforePath="$PROJECT_DIR$/.idea/laravelRus.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravelRus.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="2dfab0b2-bf5f-4fa9-9ef5-eeb55e0a026f" name="Changes" comment="form 20 hw">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FormController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FormController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/UsersSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/UsersSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/comment.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/comment.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lang/ru/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/lang/ru/validation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/testform.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/testform.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -371,7 +366,8 @@
       <workItem from="1697818627099" duration="59000" />
       <workItem from="1697882703655" duration="1224000" />
       <workItem from="1697895829674" duration="6100000" />
-      <workItem from="1697963269688" duration="12770000" />
+      <workItem from="1697963269688" duration="12904000" />
+      <workItem from="1698053149134" duration="1604000" />
     </task>
     <task id="LOCAL-00001" summary="seven day">
       <option name="closed" value="true" />
@@ -677,7 +673,23 @@
       <option name="project" value="LOCAL" />
       <updated>1697901026030</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="form 20 hw">
+      <option name="closed" value="true" />
+      <created>1697988440328</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1697988440328</updated>
+    </task>
+    <task id="LOCAL-00040" summary="form 20 hw">
+      <option name="closed" value="true" />
+      <created>1697988444480</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1697988444480</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -714,6 +726,7 @@
     <MESSAGE value="model 19 hm" />
     <MESSAGE value="model 19 hm!!!" />
     <MESSAGE value="form 20" />
-    <option name="LAST_COMMIT_MESSAGE" value="form 20" />
+    <MESSAGE value="form 20 hw" />
+    <option name="LAST_COMMIT_MESSAGE" value="form 20 hw" />
   </component>
 </project>

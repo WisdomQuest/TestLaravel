@@ -19,7 +19,8 @@
     </div>--}}
 @endif
 <h2>Заполните форму</h2>
-<form name="myform" action="testform/send" method="post">
+{{--<form name="myform" action="testform/send" method="post">--}}
+<form name="myform" action="testform/sendbyrequest" method="post">
 {{--    @method('PUT')
     @method('PATCH')                 указывать метод отлины от гет или пост
     @method('DELETE')--}}
@@ -41,6 +42,10 @@
     <br />
     <label for="bd">Ваша дата рождения</label>
     <input type="date" name="bd" id="bd" value="{{old('bd')}}"/>
+
+    @error('bd')
+    <div style="color: #AA3333"> {{$message}}</div>
+    @enderror
     <input type="submit" value="отправить">
 </form>
 

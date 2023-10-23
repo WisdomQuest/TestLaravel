@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\TestFormRequest;
 use App\Models\Comment;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -73,5 +74,14 @@ class FormController extends Controller
         $comment->save();
 
         return redirect('/comments');
+    }
+
+    public function sendByRequest(TestFormRequest $request)
+    {
+//        $validated = $request->validated(); // получаем массив
+        $validated = $request->safe(); // получаем объект
+//        print_r($validated);
+        echo $validated->name;
+        return '';
     }
 }
