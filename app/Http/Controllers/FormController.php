@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CommentFormRequest;
 use App\Http\Requests\TestFormRequest;
 use App\Models\Comment;
 use App\Models\User;
@@ -37,13 +38,9 @@ class FormController extends Controller
         return view('comment');
     }
 
-    public function commentsSend(Request $request)
+    public function commentsSend(CommentFormRequest $request)
     {
-        $validated = $request->validate([
-            'name' => 'required|min:2|max:100|alpha',
-            'email' => 'required|email',
-            'text' => 'required|max:100',
-        ]);
+        $validated = $request->validated();
 
 
         /*        DB::table('users')->insert([

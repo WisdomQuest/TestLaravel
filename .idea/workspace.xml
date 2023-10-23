@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dfab0b2-bf5f-4fa9-9ef5-eeb55e0a026f" name="Changes" comment="form 21.1">
+    <list default="true" id="2dfab0b2-bf5f-4fa9-9ef5-eeb55e0a026f" name="Changes" comment="form 21 hw">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/TestFormRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/TestFormRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FormController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FormController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lang/ru/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/lang/ru/validation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/testform.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/testform.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -366,7 +365,7 @@
       <workItem from="1697882703655" duration="1224000" />
       <workItem from="1697895829674" duration="6100000" />
       <workItem from="1697963269688" duration="12904000" />
-      <workItem from="1698053149134" duration="4163000" />
+      <workItem from="1698053149134" duration="6622000" />
     </task>
     <task id="LOCAL-00001" summary="seven day">
       <option name="closed" value="true" />
@@ -696,7 +695,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698055044229</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="form 21 hw">
+      <option name="closed" value="true" />
+      <created>1698073806260</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1698073806260</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -735,6 +742,7 @@
     <MESSAGE value="form 20" />
     <MESSAGE value="form 20 hw" />
     <MESSAGE value="form 21.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="form 21.1" />
+    <MESSAGE value="form 21 hw" />
+    <option name="LAST_COMMIT_MESSAGE" value="form 21 hw" />
   </component>
 </project>
