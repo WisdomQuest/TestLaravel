@@ -49,6 +49,12 @@
             color: #AA3333;  /* sets color of links */
             text-decoration: none;  /* removes underline */
         }
+        .mytitle{
+            color: #4bb1b1
+        }
+        .mytitle:hover {
+            color:#cc99cd ;
+        }
     </style>
 
 </head>
@@ -60,10 +66,20 @@
     @foreach($news as $new)
 
         <li>
-            @php echo $new->Type  @endphp
-            <a href="{{route('news.show',['news'=>$new])}}"> {{$new->author_id}} -- <b>{{$new->title}} </b>--- {{$new->text}} </a>
+
+            <a href="{{route('news.show',['news' => $new])}}"> {{$new->author_id}} - <b class="mytitle">{{$new->title}} </b>- {{$new->text}} </a>
         </li>
+        <a href="{{route('news.edit',['news' => $new])}}">редактировать</a>
+        <form action="{{route('news.destroy',['news' => $new])}}" name="delete" method="post">
+            @csrf
+            @method('DELETE')
+            <input type="submit" value="удалить">
+        </form>
+
     @endforeach
+        <br/>
+        <a href="{{route('news.create')}}">добавить новость</a>
+        <br/>
 </div>
 <a href="/news?page={{$page}}&sortUp" class="abba">по возрастанию</a>
 

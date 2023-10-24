@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreNewsRequest;
+use App\Http\Requests\UpdateNewsRequest;
 use App\Models\News;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -30,15 +32,21 @@ class NewsController extends Controller
      */
     public function create()
     {
-        //
+        return view('news.form',['action'=> 'create']);
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreNewsRequest $request)
     {
-        //
+        $validated = $request->safe();
+        $news = News::factory()->make();
+        $news->author_id = 3;
+        $news->title = $validated->title;
+        $news->text = $validated->text;
+        $news->save();
+        return redirect()->route('news.index');
     }
 
     /**
@@ -54,15 +62,19 @@ class NewsController extends Controller
      */
     public function edit(News $news)
     {
-        //
+        return view('news.form',['action'=> 'edit', 'news'=>$news]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, News $news)
+    public function update(UpdateNewsRequest $request, News $news)
     {
-        //
+        $validated = $request->safe();
+        $news->title = $validated->title;
+        $news->text = $validated->text;
+        $news->save();
+        return redirect()->route('news.index');
     }
 
     /**
@@ -70,8 +82,11 @@ class NewsController extends Controller
      */
     public function destroy(News $news)
     {
-        //
+        $news->delete();
+        return redirect()->route('news.index');
     }
+
+
   /*  public function news(Request $request)
     {
 

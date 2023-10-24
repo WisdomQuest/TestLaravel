@@ -19,4 +19,6 @@ class News extends Model
     {
        return '<b>' . $value . '</b>';
     }*/
+
+
 }
