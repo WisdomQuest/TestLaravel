@@ -127,5 +127,6 @@ Route::post('/testform/send', [FormController::class, 'send']);
 Route::get('/comments', [FormController::class, 'comments']);
 Route::post('/comments/send', [FormController::class, 'commentsSend']);
 Route::post('/testform/sendbyrequest', [FormController::class, 'sendByRequest']);
+Route::any('/testupload', [FormController::class, 'testUpload']);
 
 

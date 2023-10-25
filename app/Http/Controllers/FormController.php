@@ -8,7 +8,10 @@ use App\Models\Comment;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
+
 
 class FormController extends Controller
 {
@@ -65,7 +68,7 @@ class FormController extends Controller
         }
         $comment = Comment::factory()->make();
         $comment->text = $validated['text'];
-        $com = User::all()->where('email',$validated['email'])->first();
+        $com = User::all()->where('email', $validated['email'])->first();
 
         $comment->user_id = $com->id;
         $comment->save();
@@ -80,5 +83,46 @@ class FormController extends Controller
 //        print_r($validated);
         echo $validated->name;
         return '';
+    }
+
+    public function testUpload(Request $request)
+    {
+        /*Storage::put('1.txt', 'Text....');
+        Storage::disk('local')->put('1.txt', 'hello');
+        Storage::disk('public')->put('1.txt', 'hello');
+        Storage::prepend('1.txt', 'Gays');          //добавить в начало файла
+        Storage::append('1.txt', 'who a you');          //добавить в конец файла
+        if (Storage::exists('3.txt')) {
+            Storage::delete('3.txt');
+        }
+        Storage::copy('1.txt', '2.txt');
+
+        echo Storage::get('1.txt') . '<br />';
+        echo Storage::url('1.txt'). '<br />';*/
+        $path = '';
+        if ($request->submit) {
+            $validator = Validator::make($request->all(), [
+                'image' => 'required|file|max:1024|mimes:jpg,png,gif'
+            ]);
+            /*            if ($validator->fails()) {
+                            return redirect()-> куданибудь(класс Validator позволяет не сразу редирект ошибки делать)
+                        }*/
+            $validator->validate();
+
+            /*            echo $request->file('image')->getClientOriginalName() . '<br />';
+                        echo $request->file('image')->getClientOriginalExtension() . '<br />'; //расширение
+                        echo $request->file('image')->hashName() . '<br />';
+                        echo $request->file('image')->extension() . '<br />'; // расширение которое определил laravel
+                        echo $request->file('image')->getSize() . '<br />';
+                        echo $request->file('image')->getMimeType() . '<br />';*/
+            $path = Storage::disk('public')->putFile('images', $request->file('image'));
+//           echo $path . '<br />';
+            $path = Storage::disk('public')->url($path);
+//            echo $path . '<br />';
+
+
+        }
+
+        return view('testupload', ['image' => $path]);
     }
 }
