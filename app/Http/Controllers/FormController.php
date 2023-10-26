@@ -125,4 +125,22 @@ class FormController extends Controller
 
         return view('testupload', ['image' => $path]);
     }
+
+
+
+    public function addAudio(Request $request)
+    {
+        $path ='';
+        if ($request->submit) {
+                    $validated = $request->validate([
+                        'audio' => 'required|max:5120|mimes:mp3,wav'
+                    ]);
+            $path = Storage::disk('public')->putFile('audio', $request->file('audio'));
+            $path = Storage::disk('public')->url($path);
+
+        }
+
+
+        return view('addaudio', ['audio' => $path]);
+    }
 }
